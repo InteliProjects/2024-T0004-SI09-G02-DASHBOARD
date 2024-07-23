@@ -1,0 +1,74 @@
+<body>
+  <mat-card>
+    <ng-container *ngFor="let card of cardsDashboard; let i = index">
+      <mat-card-title *ngIf="i === 0">{{ card.title }}</mat-card-title>
+    </ng-container>
+    <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+    <section class="container">
+      <mat-card-actions>
+        <img src="../../../assets/People.png" alt="Imagem de Perfil" />
+      </mat-card-actions>
+      <mat-card-content>
+<!--         <h1>35%</h1> -->
+<!--         <p>de 14.638 funcionários</p> -->
+        <ng-container *ngFor="let card of cardsDashboard; let i = index">
+          <h1 *ngIf="i === 0">{{ card.value }}</h1>
+          <p *ngIf="i === 0">{{ card.description }}</p>
+        </ng-container>
+      </mat-card-content>
+    </section>
+  </mat-card>
+
+  <mat-card>
+<!--     <mat-card-title>Respondentes da Stiba</mat-card-title> -->
+    <ng-container *ngFor="let card of cardsDashboard; let i = index">
+      <mat-card-title *ngIf="i === 1">{{ card.title }}</mat-card-title>
+    </ng-container>
+    <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+    <section class="container">
+      <mat-card-actions>
+        <img src="../../../assets/People.png" alt="Imagem de Perfil" />
+      </mat-card-actions>
+      <mat-card-content>
+<!--         <h1>95%</h1> -->
+<!--         <p>de 11.976 funcionários</p> -->
+        <ng-container *ngFor="let card of cardsDashboard; let i = index">
+          <h1 *ngIf="i === 1">{{ card.value }}</h1>
+          <p *ngIf="i === 1">{{ card.description }}</p>
+        </ng-container>   
+      </mat-card-content>
+    </section>
+  </mat-card>
+
+  <mat-card class="colocacao">
+    <mat-card-title class="colocacao">Maior causa de <br> absenteísmo médico</mat-card-title>
+    <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+    <section class="container">
+      <mat-card-actions>
+        <img src="../../../assets/People.png" alt="Imagem de Perfil" />
+      </mat-card-actions>
+      <mat-card-content >
+        <h1>36%</h1>
+        <p>
+          das ausências são por ansiedade
+        </p>
+      </mat-card-content>
+    </section>
+  </mat-card>
+
+  <mat-card class="colocacao">
+    <mat-card-title class="colocacao"
+      >Taxa média de <br> absenteísmo médico</mat-card-title
+    >
+    <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+    <section class="container">
+      <mat-card-actions>
+        <img src="../../../assets/People.png" alt="Imagem de Perfil" />
+      </mat-card-actions>
+      <mat-card-content>
+        <h1>62%</h1>
+        <p>da absência dos funcionários são de até 5 dias.</p>
+      </mat-card-content>
+    </section>
+  </mat-card>
+</body>

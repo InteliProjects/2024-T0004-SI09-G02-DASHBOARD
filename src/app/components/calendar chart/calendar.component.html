@@ -1,0 +1,23 @@
+<!-- calendar.component.html -->
+<div class="calendario" id=" calendarChart">
+    <p class="titulo_do_grafico">Picos de faltas por mês</p>
+    <div class="calendario-titulo">
+      <button (click)="alterarMes(-1)" class="botao">‹</button>
+      <div>{{ dataAtual | date: 'MMM yyyy' }}</div>
+      <button (click)="alterarMes(+1)" class="botao">›</button>
+    </div>
+    <div class="calendario-cabecalho-dias">
+      <div *ngFor="let nomeDia of ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'];" class="nome-dia">
+        {{ nomeDia }}
+      </div>
+    </div>
+    <div class="calendario-dias">
+      <div *ngFor="let dia of diasCalendario; index as i" class="calendario-dia"
+        [ngClass]="{
+          'calendario-dia-nao-faz-parte-mes-atual': dataAtual.getMonth() !== dia.getMonth(),
+          'calendario-dia-destaque': deveDestacar(dia)
+        }">
+        <span class="dia-mes">{{ dia | date: 'dd' }}</span>
+      </div>
+    </div>
+</div>

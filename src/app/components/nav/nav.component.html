@@ -1,0 +1,90 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
+    <img
+      class="vw-logo"
+      width="90px"
+      height="90px"
+      src="../../../assets/logoVW-branca.png"
+      alt="VW Logo"
+    />
+    <mat-toolbar class="title">Volkswagen</mat-toolbar>
+
+    <mat-nav-list>
+        <a
+        routerLink="/dashboard"
+        mat-list-item
+        class="blank-link"
+        (click)="changeTitle('Dashboard Geral')"
+      >
+      <p>
+        <mat-icon>area_chart</mat-icon>
+        Dashboard geral
+      </p>
+      </a>
+      
+      <a
+        routerLink="/org"
+        mat-list-item
+        class="blank-link"
+        (click)="changeTitle('Organização')"
+      >
+      <p>
+        <mat-icon>group</mat-icon>
+        Organização
+      </p>
+        
+      </a>
+      <a
+        routerLink="/"
+        mat-list-item
+        class="blank-link"
+        (click)="changeTitle('Notificação')"
+      >
+        <p>
+          <mat-icon>notifications</mat-icon>
+          Notificações
+        </p>
+      </a>
+      <a
+        routerLink="/"
+        mat-list-item
+        class="blank-link"
+        (click)="changeTitle('Análise de Dados')"
+      >
+        <p>
+          <mat-icon>scatter_plot</mat-icon>
+          Análise de dados
+        </p>
+      </a>
+    </mat-nav-list>
+    <img
+      width="113px"
+      height="61px"
+      src="../../../assets/inteli.png"
+      alt="VW Logo"
+      class="vw-inteli"
+    />
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar>
+      @if (isHandset$ | async) {
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+      >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      }
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.organization-card {
+    display: flex; /* Mantém flex aqui */
+    align-items: center; /* Centraliza verticalmente os itens */
+    gap: 20px; /* Espaço entre imagem e informações do cartão */
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    background: #ffffffd3;
+    color: #585858;
+    font-family: 'Poppins', sans-serif;
+    width: 95%; /* Ajusta a largura dos cards */
+}
+
+.profile-image {
+    flex-shrink: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    left: -15px;
+    /* Assegure-se de adicionar a imagem aqui, por exemplo com background-image */
+}
+
+.card{
+    flex-direction: row;
+    position: relative;
+    display: grid;
+    text-align: center; 
+    align-items: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap; 
+    width: 100%;
+    grid-template-columns: min-content repeat(6, 1fr); /* Faz com que a primeira coluna seja do tamanho do seu conteúdo, minimizando seu tamanho */
+
+}
+
+.card .name {
+    font-weight: 700;
+}
+
+
+.above {
+    color: rgb(1, 152, 1);
+    font-weight: 650; 
+  }
+  
+.below {
+    color: rgb(156, 1, 1);
+    font-weight: 650; 
+  }
+  
+
+.score{
+    font-weight: 600;
+}
+
+
+
+@media (max-width: 600px) {
+    .organization-card {
+        flex: 0 0 100%;
+        max-width: none;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .card-container {
+        padding: 10px 0;
+    }
+}
+
+
+

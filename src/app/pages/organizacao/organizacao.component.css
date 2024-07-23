@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.area{
+  position: relative;
+  width: calc(100% - 270px);
+  left: 190px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.initial-bar {
+  position: relative;
+  padding: 2px;
+  width: 80%;
+  left: 210px;
+  top: 10px;
+  font-family: poppins;
+
+}
+
+.date {
+  text-align: right;
+}
+
+.titleDashboard {
+  position: relative;
+  left: 15px;
+  top: 20px;
+  font-family: poppins;
+  font-weight: 600;
+}

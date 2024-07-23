@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.organization-card {
+    position: relative;
+    background-color: azure;
+    flex: 0 0 calc(33.333% - 2px);
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    background: #f4f4f4;
+    font-family: "Poppins";
+    width: 1157px;
+}
+
+.profile-image {
+    border-radius: 50%;
+    margin-right: 20px;
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+}
+
+.position {
+    color: rgb(156, 1, 1);
+    font-weight: 800;
+}
+
+
+.inidividual-data {
+    display: flex;
+    align-items: center
+}
+
+.inidividual-data .name {
+    font-weight: 700;
+    flex: 0 0 auto;
+    margin-right: 10px;
+}
+
+.inidividual-data p {
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 600px) {
+    .organization-card {
+        flex: 0 0 100%;
+        max-width: none;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .card-container {
+        padding: 10px 0;
+    }
+}

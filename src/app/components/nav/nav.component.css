@@ -1,0 +1,54 @@
+
+.sidenav {
+  width: 200px;
+  background-color: #012d5e;
+}
+
+.vw-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 50px;
+}
+
+.blank-link {
+  color: white;
+  text-decoration: none;
+}
+
+.vw-inteli {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 35px;
+  left: 50px;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background: inherit;
+  color: white;
+  font-family: poppins;
+}
+
+.mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #012d5e;
+  color: white;
+}
+
+p{
+  color: white;
+  font-family: poppins;
+  font-size: 15px;
+}
+
+.mat-icon{
+  position: relative;
+  top: 7px;
+}

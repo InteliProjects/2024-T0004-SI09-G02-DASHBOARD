@@ -1,0 +1,41 @@
+<div class="tela">
+  <div class="grid_1">
+    <video width="100%" autoplay loop muted>
+      <source src="../../../assets/video-gti.mp4" type="video/mp4">
+      Seu navegador não suporta o elemento de vídeo.
+    </video>
+  </div>
+
+  <div class="grid_2">
+    <div class="page">
+      <form class="formLogin">
+        <h1>Bem vindo(a) de volta</h1>
+        <label for="email">Login</label>
+        <input
+          type="email"
+          placeholder="Insira seu email"
+          autofocus="true"
+          [(ngModel)]="email"
+        />
+
+        <label for="password">Password</label>
+        <input
+          type="password"
+          placeholder="Insira sua senha"
+          [(ngModel)]="password"
+        />
+        <div class="switch-container">
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+          <span class="remember-me">Lembrar de mim</span>
+        </div>
+
+        <button class="btn" (click)="login()">Entrar </button>
+        <div class="error-message" *ngIf="errorMessage">{{ errorMessage }}</div>
+      </form>
+    </div>
+    <form class="formLogin"></form>
+  </div>
+</div>

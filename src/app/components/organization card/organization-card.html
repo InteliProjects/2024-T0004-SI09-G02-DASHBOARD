@@ -1,0 +1,17 @@
+    <section class="organization-card" *ngFor="let card of cards">
+      <a
+        routerLink="/org-individual"
+      >
+        <div class="card">
+          <img src="../../../assets\user.png" alt="profile image" class="profile-image">
+            <p class="name">{{card.name}}</p>
+            <p class="department">{{card.department}}</p>
+                <p class="score">Empresa: <span>{{card.EmpresaScore}}</span></p>
+              <p class="score">STIBA: <span>{{card.StibaScore}}</span></p>
+              <p class="score">GPTW: <span>{{card.GPTWScore}}</span></p>
+            <div class="card-info">
+              <p [ngClass]="{'above': isAboveRating(card.Rating), 'below': isBelowRating(card.Rating)}">{{card.Rating}}</p>
+            </div>
+        </div>
+      </a>
+    </section>
